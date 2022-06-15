@@ -91,4 +91,15 @@
         ],
         "description": "Register new block."
     },
+    "Block Placeholder": {
+        "prefix": [
+            "plac-block"
+        ],
+        "body": [
+            "<div style='height: 400px; background: #242424; display: flex; justify-content: center; align-items: center; border-radius: 5px'>",
+            "    <p style='max-width: 50%; text-align: center; font-style: italic; color: #aaa'><b>This is a placeholder for the block '${1:Name}': The content will be displayed here, don't worry.</b></p>",
+            "</div>",
+        ],
+        "description": "Add placeholder for block."
+    },
 }
