@@ -105,13 +105,33 @@ html {
 tmm {
     color: white;
     line-height: 1;
-    padding: 0.05em 0.15em;
+    padding: 0 0.15em;
     margin-bottom: 0.05em;
     display: inline-block;
     background-image: linear-gradient(to right, var(--accent) 0, var(--accent) 100%);
     background-size: 100% 100%;
     background-repeat: repeat-x;
     background-position: bottom;
+    background-color: var(--accent);
+    box-shadow: 0.05em 0 0 var(--accent), -0.05em 0 0 var(--accent);
+    box-decoration-break: clone;
+    display: inline;
+}
+
+tmm-negative {
+    color: var(--accent);
+    line-height: 1;
+    padding: 0 0.15em;
+    margin-bottom: 0.05em;
+    display: inline-block;
+    background-image: linear-gradient(to right, white 0, white 100%);
+    background-size: 100% 100%;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-color: white;
+    box-shadow: 0.05em 0 0 white, -0.05em 0 0 white;
+    box-decoration-break: clone;
+    display: inline;
 }
 
 p + p {
