@@ -1,6 +1,8 @@
 <?php
 /* tmm */
-$_ENV["i18n"] = json_decode(file_get_contents(__DIR__ . "/i18n/" . pll_current_language("slug") . ".json"), true);
+if(!is_admin()) {
+    $_ENV["i18n"] = json_decode(file_get_contents(__DIR__ . "/i18n/" . pll_current_language("slug") . ".json"), true);
+}
 
 function tmm_scripts() {
     wp_enqueue_style( 'bundle', get_template_directory_uri() . '/dist/bundle.min.css', [], "1.0.0" );
