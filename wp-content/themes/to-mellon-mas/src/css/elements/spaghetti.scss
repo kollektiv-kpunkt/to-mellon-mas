@@ -1,0 +1,17 @@
+.tmm-spaghetti-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 30%;
+    mix-blend-mode: soft-light;
+}
+
+.tmm-spaghetti-bg-wrapper svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}

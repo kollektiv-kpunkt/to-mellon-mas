@@ -102,4 +102,13 @@
         ],
         "description": "Add placeholder for block."
     },
+    "i18n Variable": {
+        "prefix": [
+            "i18n"
+        ],
+        "body": [
+            "<?= \\$_ENV['i18n']['${1:level1}']['${2:variable}'] ?>",
+        ],
+        "description": "Add i18n variable."
+    },
 }

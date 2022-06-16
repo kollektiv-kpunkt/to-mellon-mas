@@ -1,1 +1,1 @@
-alert("uwu");
+import "./dsswitcher.js";

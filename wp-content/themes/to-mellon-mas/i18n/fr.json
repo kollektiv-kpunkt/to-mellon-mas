@@ -1,0 +1,18 @@
+{
+    "misc" : {
+        "fname" : "Prenom",
+        "lname" : "Nom",
+        "email" : "Adresse courriel",
+        "zip" : "CPA",
+        "optin" : "J'accepte d'être tenu au courant par la JS Suisse.<br><a href='/protection-des-donnees'>Plus de détails sur la protection des données</a>.",
+        "submit1" : "Je participe",
+        "submitdonate" : "Faire un don"
+    },
+    "fragments" : {
+        "donate-title" : "Ton don pour notre avenir !",
+        "donate-content" : "L'Initiative pour l'avenir pose la première pierre d'une politique climatique sociale et ouvre ainsi un nouveau chapitre de la politique climatique suisse. Pour que la campagne soit un succès total, nous avons besoin de chaque soutien. Merci beaucoup pour ton don en faveur de l'Initiative pour l'avenir.",
+        "newsletter-title" : "Sois de la partie !",
+        "newsletter-content" : "Avec l'initiative d'avenir, nous mettons les gaz pour la justice climatique. Abonne-toi à notre newsletter et sois toujours au courant des dernières nouvelles !",
+        "explain-container-content" : "Initiativtexte sind kompliziert, das wissen wir: C'est pourquoi nous t'avons expliqué ici les termes les plus importants du texte. <b class='text-accent'>Clique sur les <i class='fas fa-info-circle text-accent'></i>-Symbole dans le texte pour qu'une brève explication s'affiche ici !</b>"
+    }
+}

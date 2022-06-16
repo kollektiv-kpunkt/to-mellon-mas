@@ -1,0 +1,29 @@
+.tmm-newsletter-image-inner {
+    position: relative;
+    padding-bottom: 100%;
+
+    .tmm-newsletter-image-blind, img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(1.25);
+
+        &.tmm-newsletter-image-saturation {
+            background-color: white;
+            mix-blend-mode: saturation;
+        }
+
+        &.tmm-newsletter-image-overlay {
+            background-color: var(--accent-70);
+            mix-blend-mode: color;
+            opacity: 0.75;
+        }
+    }
+
+    .tmm-spaghetti-bg-wrapper {
+        opacity: 0.5;
+    }
+}

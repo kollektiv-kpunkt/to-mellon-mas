@@ -1,0 +1,50 @@
+.tmm-donate-box {
+    width: calc(50% - 0.5rem);
+    padding: 1rem;
+    border: 4px solid var(--boxcolor);
+    border-radius: 4px;
+    color: var(--boxcolor);
+    background-color: var(--boxbg);
+    position: relative;
+    cursor: pointer;
+
+    .tmm-donate-box-amount {
+        font-size: var(--boxfontsize);
+        line-height: 1.25;
+        margin: auto;
+    }
+
+    .tmm-donate-box-currency {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        line-height: 0.8;
+    }
+
+    &.tmm-donate-box-selected {
+        --boxcolor: var(--accent);
+        --boxbg: white;
+        border: 4px solid var(--boxbg);
+    }
+
+    --boxcolor: white;
+    --boxbg: var(--accent);
+    --boxfontsize: 6rem;
+
+    transition: 0.25s ease color, 0.25s ease background-color;
+
+    input.tmm-donate-box-custom {
+        background-color: transparent;
+        width: 100%;
+        border-bottom: 0.8rem solid var(--boxcolor);
+        font-size: var(--boxfontsize);
+        text-align: center;
+        outline: none;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+}

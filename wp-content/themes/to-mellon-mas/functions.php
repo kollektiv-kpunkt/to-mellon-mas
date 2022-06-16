@@ -1,18 +1,18 @@
 <?php
-
 /* tmm */
+$_ENV["i18n"] = json_decode(file_get_contents(__DIR__ . "/i18n/" . pll_current_language("slug") . ".json"), true);
 
 function tmm_scripts() {
-    wp_enqueue_style( 'fa', get_template_directory_uri() . "/lib/font-awesome/css/font-awesome.min.css", [], "1.0.0" );
-    wp_enqueue_style( 'theme', get_template_directory_uri() . '/dist/theme.css', [], "1.0.0" );
-    wp_enqueue_style( 'bundle', get_template_directory_uri() . '/dist/style.css', [], "1.0.0" );
-    wp_enqueue_script( 'bundle', get_template_directory_uri() . '/dist/app.js', array(), "1.0.0", true );
+    wp_enqueue_style( 'bundle', get_template_directory_uri() . '/dist/bundle.min.css', [], "1.0.0" );
+    wp_enqueue_script( 'bundle', get_template_directory_uri() . '/dist/app.min.js', array(), "1.0.0", true );
 }
 add_action( 'wp_enqueue_scripts', 'tmm_scripts' );
 
 function tmm_theme_support() {
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'editor-styles' );
+    add_editor_style('dist/bundle.min.css' );
 }
 add_action( 'after_setup_theme', 'tmm_theme_support' );
 
@@ -36,6 +36,51 @@ function tmm_menu_items( $location, $args = [] ) {
     // Return menu post objects
     return $menu_items;
 }
+
+add_filter( 'wp_get_nav_menu_items', 'prefix_nav_menu_classes', 10, 3 );
+
+function prefix_nav_menu_classes($items, $menu, $args) {
+    _wp_menu_item_classes_by_context($items);
+    return $items;
+}
+
+// TMM Shortcodes
+
+function tmm_cookie_shortcode($atts, $content = null) {
+    ob_start();
+    echo('<a><button data-cc="c-settings" class="underline">' . $content . '</button></a>');
+    return ob_get_clean();
+}
+
+add_shortcode('tmm-cookie-settings', 'tmm_cookie_shortcode');
+
+function tmm_explain_shortcode($atts, $content = null) {
+    ob_start();
+    echo('<a class="tmm-explain-link" data-explanation="' . $content . '"></a>');
+    return ob_get_clean();
+}
+
+add_shortcode('tmm-explain', 'tmm_explain_shortcode');
+
+function tmm_explain_container_shortcode($atts, $content = null) {
+    ob_start();
+    get_template_part( "template-parts/elements/explain-container");
+    return ob_get_clean();
+}
+
+add_shortcode('tmm-explain-container', 'tmm_explain_container_shortcode');
+
+/* Element Shortcode */
+function tmm_element_shortcode($atts) {
+    $args = shortcode_atts( array(
+        "elem" => "",
+    ), $atts, "tmm-element" );
+    ob_start();
+    get_template_part("template-parts/elements/{$args['elem']}", "", $atts);
+    return ob_get_clean();
+}
+
+add_shortcode('tmm-element', 'tmm_element_shortcode');
 
 
 // ACF

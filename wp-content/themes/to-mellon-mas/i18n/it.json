@@ -1,0 +1,18 @@
+{
+    "misc" : {
+        "fname" : "Nome",
+        "lname" : "Cognome",
+        "email" : "Indirizzo e-mail",
+        "zip" : "CAP",
+        "optin" : "Accetto che GISO Svizzera mi tenga informato.<br><a href='/protezione-dei-dati'>Più informazioni sulla protezione dei dati</a>",
+        "submit1" : "Sono in",
+        "submitdonate" : "Donare ora"
+    },
+    "fragments" : {
+        "donate-title" : "La vostra donazione per il nostro futuro!",
+        "donate-content" : "L'Iniziativa Futuro getta le basi per una politica climatica sociale e apre così un nuovo capitolo nella politica climatica svizzera. Affinché la campagna sia un completo successo, dipendiamo da ogni sostegno. Grazie per la vostra donazione all'Iniziativa per il futuro.",
+        "newsletter-title" : "Siate presenti!",
+        "newsletter-content" : "Con l'Iniziativa per il futuro, ci stiamo impegnando a fondo per la giustizia climatica. Iscriviti alla nostra newsletter e rimani aggiornat*",
+        "explain-container-content" : "Sappiamo che i testi delle iniziative sono complicati: Per questo motivo abbiamo spiegato qui i termini più importanti del testo. <b class='text-accent'>Cliccate sui <i class='fas fa-info-circle text-accent'></i>-simboli nel testo per una breve spiegazione!</b>"
+    }
+}

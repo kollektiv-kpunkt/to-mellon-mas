@@ -1,0 +1,100 @@
+.tmm-form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    column-gap: var(--gutter);
+    row-gap: var(--rowgutter);
+
+    --cols: 2;
+    --gutter: 2rem;
+    --rowgutter: 1rem;
+    --formcolor: var(--accent);
+
+    @media (max-width: 780px) {
+        flex-direction: column;
+    }
+
+    &.tmm-form-white {
+        --formcolor: white;
+    }
+
+    .tmm-button {
+        margin-top: var(--rowgutter);
+        --btn-border: var(--formcolor);
+        --btn-color: var(--formcolor);
+
+        &[type="submit"] {
+            width: calc(100% / var(--cols) - (var(--cols) - 1) * var(--gutter) / var(--cols));
+
+            @media (max-width: 780px) {
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+.tmm-form-group {
+    width: calc(100% / var(--cols) - (var(--cols) - 1) * var(--gutter) / var(--cols));
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.25rem;
+
+    @media (max-width: 780px) {
+        width: 100%;
+    }
+
+    &.tmm-form-group-fullwidth {
+        width: 100%;
+    }
+
+    &.tmm-form-group-checkbox {
+        flex-direction: row;
+
+        label {
+            color: var(--black);
+            font-size: 0.8rem;
+            font-weight: 400;
+            padding-left: 1.6em;
+            text-indent: -0.8em;
+        }
+    }
+}
+
+.tmm-form-group label {
+    font-size: 1.25rem;
+    text-align: start;
+    font-weight: bold;
+    color: var(--formcolor);
+}
+
+.tmm-form-input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid var(--formcolor);
+    padding: 0.1em 0;
+    outline: none;
+}
+
+.tmm-form-group-checkbox label {
+    cursor: pointer;
+}
+
+
+.tmm-form-group-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.tmm-form-group-checkbox input[type="checkbox"]+label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f0c8";
+    letter-spacing: 10px;
+    cursor: pointer;
+}
+
+.tmm-form-group-checkbox input[type="checkbox"]:checked+label:before {
+    content: "\f14a";
+    color: var(--formcolor);
+}

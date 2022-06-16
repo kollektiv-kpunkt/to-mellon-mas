@@ -1,0 +1,16 @@
+a.tmm-explain-link {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: none;
+    --linkcolor: var(--accent);
+    --linkhover: var(--accent);
+    transition: 0.125s ease-in-out color;
+    cursor: pointer;
+}
+
+a.tmm-explain-link::after {
+    content: "\f05a";
+    font-family: "FontAwesome";
+    font-weight: bold;
+    text-decoration: none;
+}

@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'graph';
+    src: url('graph-black-webfont.woff2') format('woff2'),
+        url('graph-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'mort';
+    src: url('mort-black-webfont.woff2') format('woff2'),
+        url('mort-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'mort';
+    src: url('mort-bold-webfont.woff2') format('woff2'),
+        url('mort-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'mort';
+    src: url('mort-regular-webfont.woff2') format('woff2'),
+        url('mort-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'mort';
+    src: url('mort-semibold-webfont.woff2') format('woff2'),
+        url('mort-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+.tmm-graph {
+    font-family: 'graph', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+}
+
+html {
+    font-size: clamp(15px, 1vw, 18px);
+
+    @media (max-width: 780px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 13px;
+    }
+}
+
+a {
+    color: var(--linkcolor);
+    line-height: 1;
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
+    background-image: linear-gradient(to right, var(--linkcolor) 0, var(--linkcolor) 100%);
+    background-size: 100% 0.15em;
+    background-repeat: repeat-x;
+    background-position: bottom;
+
+    --linkcolor: var(--accent);
+    --linkhover: white;
+
+    transition: 0.125s ease-in-out background-size, 0.125s ease-in-out color;
+}
+
+a:hover {
+    background-size: 100% 100%;
+    color: var(--linkhover);
+}
+
+.text-white a {
+    --linkcolor: white;
+    --linkhover: var(--accent);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'graph', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+}
+
+html {
+    font-family: 'mort', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+tmm {
+    color: white;
+    line-height: 1;
+    padding: 0.05em 0.15em;
+    margin-bottom: 0.05em;
+    display: inline-block;
+    background-image: linear-gradient(to right, var(--accent) 0, var(--accent) 100%);
+    background-size: 100% 100%;
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+
+p + p {
+    margin-top: 0.8em;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+h2 {
+    font-size: 3.75rem;
+    color: var(--accent);
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+h5, h6 {
+    font-size: 1.5rem;
+}

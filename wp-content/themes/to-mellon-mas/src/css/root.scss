@@ -1,0 +1,52 @@
+:root {
+    --accent-120: #A93A43;
+    --accent-110: #BE424C;
+    --accent: #D34954;
+    --accent-90: #D85C66;
+    --accent-80: #DC6D76;
+    --accent-70: #E18088;
+    --accent-60: #E59298;
+    --accent-50: #EAA5AA;
+    --accent-40: #EEB6BB;
+    --accent-30: #F2C9CC;
+    --accent-20: #F6DBDD;
+    --accent-10: #FBEDEE;
+
+    &.tmm-ds2 {
+        --accent-120: #4A9ABC;
+        --accent-110: #53ADD4;
+        --accent: #5CC0EB;
+        --accent-90: #6DC7ED;
+        --accent-80: #7DCDEF;
+        --accent-70: #8DD3F1;
+        --accent-60: #9DD9F3;
+        --accent-50: #AEE0F5;
+        --accent-40: #BEE6F7;
+        --accent-30: #CFEDF9;
+        --accent-20: #DEF2FB;
+        --accent-10: #EFF9FD;
+    }
+    &.tmm-ds3 {
+        --accent-120: #5A9357;
+        --accent-110: #65A662;
+        --accent: #70B86D;
+        --accent-90: #7FC07C;
+        --accent-80: #8DC68A;
+        --accent-70: #9BCE99;
+        --accent-60: #A9D4A7;
+        --accent-50: #B8DCB6;
+        --accent-40: #C6E3C5;
+        --accent-30: #D5EAD4;
+        --accent-20: #E2F1E2;
+        --accent-10: #F1F8F1;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: var(--accent-30);
+    color: var(--accent-120);
+}

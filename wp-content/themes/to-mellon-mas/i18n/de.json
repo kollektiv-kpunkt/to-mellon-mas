@@ -1,0 +1,18 @@
+{
+    "misc" : {
+        "fname" : "Vorname",
+        "lname" : "Nachname",
+        "email" : "E-Mail Adresse",
+        "zip" : "PLZ",
+        "optin" : "Ich bin einverstanden, dass mich die JUSO Schweiz auf dem Laufenden halten darf.<br><a href='/datenschutz'>Mehr zum Datenschutz</a>",
+        "submit1" : "Ich bin dabei",
+        "submitdonate" : "Jetzt spenden"
+    },
+    "fragments" : {
+        "donate-title" : "Deine Spende für unsere Zukunft!",
+        "donate-content" : "Die Zukunftsinitiative legt den Grundstein für eine soziale Klimapolitik und eröffnet somit ein neues Kapitel in der Schweizer Klimapolitik. Damit die Kampagne ein voller Erfolg wird, sind wir auf jede Unterstützung angewiesen. Vielen Dank für deine Spende für die Zukunftsinitiative.",
+        "newsletter-title" : "Sei dabei!",
+        "newsletter-content" : "Mit der Zukunftsinitiative geben wir Vollgas für die Klimagerechtigkeit. Abboniere unseren Newsletter und bleibe immer auf dem Laufenden!",
+        "explain-container-content" : "Initiativtexte sind kompliziert, das wissen wir: Darum haben wir dir die wichtigsten Begriffe im Text hier erklärt. <b class='text-accent'>Klicke auf die <i class='fas fa-info-circle text-accent'></i>-Symbole im Text, damit dir hier eine kurze Erklärung angezeigt wird!</b>"
+    }
+}

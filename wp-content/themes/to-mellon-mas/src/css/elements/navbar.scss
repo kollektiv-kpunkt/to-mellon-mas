@@ -1,0 +1,30 @@
+nav#tmm-nav-wrapper {
+    position: fixed;
+    color: white;
+    line-height: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    a {
+        &.tmm-menu-item {
+            font-size: 1.25rem;
+        }
+
+        --linkcolor: white;
+        --linkhover: var(--accent);
+
+        &.tmm-menu-item-current {
+            background-size: 100% 100%;
+            color: var(--linkhover);
+        }
+    }
+}
+
+.tmm-language-switcher {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+}
