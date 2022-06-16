@@ -1,6 +1,6 @@
 <?php
 /* tmm */
-if(!is_admin()) {
+if(pll_current_language("slug")) {
     $_ENV["i18n"] = json_decode(file_get_contents(__DIR__ . "/i18n/" . pll_current_language("slug") . ".json"), true);
 }
 
