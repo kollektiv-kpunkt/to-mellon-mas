@@ -42,6 +42,11 @@
         }
     }
 
+    @media (max-width: 1080px) {
+        flex-direction: column;
+        row-gap: 4rem;
+    }
+
     &.tmm-2col-largegap >div {
         width: calc(50% - 3.5rem);
 

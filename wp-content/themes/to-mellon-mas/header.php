@@ -23,6 +23,9 @@ if (is_front_page()) {
     get_template_part( "template-parts/elements/navbar");
     ?>
 </nav>
+<?php
+get_template_part( "template-parts/elements/mobilemenu");
+?>
 <body>
 
     <div id="main-content">

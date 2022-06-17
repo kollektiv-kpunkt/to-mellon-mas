@@ -1,13 +1,13 @@
-<div id="tmm-navbar-inner" class="py-4">
-    <div class="tmm-navbar-desktop">
-        <div class="tmm-navbar-content">
-            <div class="tmm-menu-main flex gap-x-10 my-auto justify-center">
+<div class="tmm-mobilemenu-wrapper tmm-navbar-mobile h-screen bg-accent-120 z-50 py-20 flex flex-col justify-center">
+    <div class="tmm-mobilemenu-inner w-full">
+        <div class="tmm-mobilemenu-content">
+            <div class="tmm-mobilemenu-main flex flex-col gap-y-10">
                 <?php
                 $menuitems = tmm_menu_items("tmm-main-nav");
                 foreach ($menuitems as $item) {
                     $title = $item->title;
                     $url = $item->url;
-                    $classes = "tmm-menu-item px-1 tmm-graph";
+                    $classes = "tmm-menu-item px-10 py-4 tmm-graph";
                     if ($item->current) {
                         $classes .= " tmm-menu-item-current";
                     }
@@ -16,7 +16,7 @@
                 ?>
             </div>
         </div>
-        <div class="tmm-language-switcher flex gap-x-2 tmm-graph items-center">
+        <div class="tmm-mobilemenu-language-switcher flex gap-x-2 pt-10 tmm-graph justify-end items-center lgcont text-white text-2xl leading-none">
             <?php
                 $langs = pll_the_languages(array("raw" => 1));
                 $langs = array_filter(
@@ -37,12 +37,6 @@
                 $i++;
                 endforeach;
             ?>
-        </div>
-    </div>
-    <div class="tmm-navbar-mobile">
-        <div class="tmm-navbar-tofuburger-wrapper flex mdcont justify-end">
-            <span class="tmm-graph text-3xl flex justify-center mr-3">Menu</span>
-            <button class="tmm-navbar-tofuburger my-4"></button>
         </div>
     </div>
 </div>

@@ -85,6 +85,26 @@ function tmm_element_shortcode($atts) {
 add_shortcode('tmm-element', 'tmm_element_shortcode');
 
 
+// TMM .HTACCESS
+function tmm_htaccess( $rules ) {
+    $content = <<<EOD
+    \n
+    Options +FollowSymLinks -MultiViews
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^api/?$ /wp-content/themes/to-mellon-mas/api/index.php [L,NC]
+    RewriteRule ^api/(.+)$ /wp-content/themes/to-mellon-mas/api/index.php [L,NC]\n\n
+    EOD;
+    return $content . $rules;
+}
+add_filter('mod_rewrite_rules', 'tmm_htaccess');
+
+function tmm_enable_flush_rules() {
+    global $wp_rewrite;
+    $wp_rewrite->flush_rules();
+}
+add_action( "admin_init", 'tmm_enable_flush_rules' );
+
 // ACF
 
 function tmm_acf() {

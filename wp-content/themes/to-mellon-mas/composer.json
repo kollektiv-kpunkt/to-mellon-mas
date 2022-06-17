@@ -15,5 +15,10 @@
             "email": "54284649+timothyoesch@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "pecee/simple-router": "4.3.7.2",
+        "mailchimp/marketing": "^3.0",
+        "matomo/matomo-php-tracker": "^3.0"
+    }
 }
