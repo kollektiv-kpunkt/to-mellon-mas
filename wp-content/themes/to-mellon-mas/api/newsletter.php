@@ -4,6 +4,7 @@ if($json = json_decode(file_get_contents("php://input"), true)) {
 } else {
     $data = $_POST;
 }
+$_ENV["i18n"] = json_decode(file_get_contents(__DIR__ . "/../i18n/" . $data["lang"] . ".json"), true);
 
 $mcload = [
     "email_address" => $data["email"],
@@ -11,20 +12,12 @@ $mcload = [
         "FNAME" => $data["fname"],
         "LNAME" => $data["lname"],
     ],
-    'tags' => ["lang_" . $data["lang"]],
+    'tags' => [],
     "status" => "subscribed",
 ];
 
 if (isset($data["optin"])) {
     array_push($mcload["tags"], "optin");
-}
-
-if (isset($data["source"]) && $data["source"] != "") {
-    array_push($mcload["tags"], "src_" . $data["source"]);
-}
-
-if (isset($data["printer"])) {
-    array_push($mcload["tags"], "no_printer");
 }
 
 try {
@@ -71,8 +64,7 @@ if (!$response) {
 
 $return = [
     "success" => true,
-    "nextStep" => 2,
-    "formData" => $data,
+    "message" => $_ENV['i18n']['misc']['subscriptionThx'],
     "errors" => []
 ];
 echo json_encode($return);

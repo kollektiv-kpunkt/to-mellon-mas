@@ -2,7 +2,7 @@
 $iconSVG = file_get_contents( __DIR__ . '/../elements/img/icon.svg' );
 ?>
 
-<div class="tmm-donate-wrapper bg-accent relative mt-36">
+<div class="tmm-donate-wrapper bg-accent relative mt-36" id="donate">
     <div class="smcont z-10 relative py-12 text-white text-center">
         <h2 class="text-6xl mb-4 text-white"><?= $_ENV['i18n']['fragments']['donate-title'] ?></h2>
         <div class="text-xl font-semibold mb-6"><?= $_ENV['i18n']['fragments']['donate-content'] ?></div>

@@ -1,5 +1,6 @@
 module.exports = {
   content: require("fast-glob").sync(["./**/*.php", "*.php"]),
+  safelist: ["bg-accent-10"],
   theme: {
     extend: {
       colors: {

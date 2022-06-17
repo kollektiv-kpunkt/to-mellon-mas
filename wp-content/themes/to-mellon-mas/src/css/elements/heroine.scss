@@ -21,3 +21,59 @@
         z-index: 20;
     }
 }
+
+
+/* Share */
+
+.tmm-share-buttons .tmm-button {
+    font-size: 1rem;
+    width: calc(50% - 1rem);
+
+    &:not([data-type="email"]) {
+        --bordercolor: var(--backgroundcolor)
+    }
+
+    @media (max-width: 780px) {
+        width: 100%;
+    }
+}
+
+.tmm-share-buttons .tmm-button::before {
+    font-family: "FontAwesome";
+    margin-right: 0.5rem;
+    transform-origin: center right;
+    display: inline-block;
+    font-weight: 400;
+}
+
+.tmm-share-buttons .tmm-button[data-type="whatsapp"] {
+    --backgroundcolor: #25d366;
+
+    &::before {
+        content: "\f232";
+    }
+}
+
+.tmm-share-buttons .tmm-button[data-type="telegram"] {
+    --backgroundcolor: #0088cc;
+
+    &::before {
+        content: "\f2c6";
+    }
+}
+
+.tmm-share-buttons .tmm-button[data-type="signal"] {
+    --backgroundcolor: #3775e0;
+
+    &::before {
+        content: "\f1db";
+    }
+}
+
+.tmm-share-buttons .tmm-button[data-type="facebook"] {
+    --backgroundcolor: #4267b2;
+
+    &::before {
+        content: "\f09a";
+    }
+}

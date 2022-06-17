@@ -22,29 +22,37 @@ function formLogic(form) {
         body: JSON.stringify(formData),
       });
       const content = await rawResponse.json();
-      let type = this.getAttribute("data-type");
-      console.log(type);
-      if (type == "multistep") {
-        console.log("uwu");
+      console.log(content);
+      if (!content.success) {
+        alert(content.message);
+        return;
       }
-      //   if (content.success) {
-      //     if (content.action == "nextStep") {
-      //       if (content.nextStep) {
-      //         nextStep = content.nextStep;
-      //       }
-      //       this.querySelector(
-      //         `.CtAStep[data-step-id='form-step${step}']`
-      //       ).setAttribute("hidden", true);
-      //       this.querySelector(
-      //         `.CtAStep[data-step-id='form-step${nextStep}']`
-      //       ).removeAttribute("hidden");
-      //     } else if (content.action == "redirect") {
-      //       window.location.href = content.redirect;
-      //     }
-      //   } else {
-      //     console.log(content);
-      //     alert("Something went wrong. Please try again.");
-      //   }
+      let type = this.getAttribute("data-type");
+      if (type == "multistep") {
+        let nameSpace = this.getAttribute("data-namespace");
+        let nextStep = document.querySelector(
+          `form[data-namespace="${nameSpace}"][data-step="${content.nextStep}"]`
+        );
+        nextStep.querySelector("input[name=formData]").value = JSON.stringify(
+          content.formData
+        );
+        let scrollOffset =
+          this.getBoundingClientRect().top + window.scrollY - 100;
+        if (scrollOffset > window.scrollY) {
+          scrollOffset = window.scrollY;
+        }
+        this.hidden = true;
+        scrollTo({
+          top: scrollOffset,
+          behavior: "smooth",
+        });
+        nextStep.hidden = false;
+      } else if (type == "message") {
+        let alert = this.querySelector(".tmm-response-alert");
+        alert.querySelector("span").innerText = content.message;
+        this.reset();
+        alert.hidden = false;
+      }
     })();
   });
 }
@@ -54,3 +62,42 @@ if (document.querySelector("form.tmm-api-form")) {
     formLogic(form);
   });
 }
+
+document
+  .querySelectorAll(".tmm-share-buttons .tmm-button")
+  .forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      let mobimsg = document
+        .querySelector(".tmm-share-buttons")
+        .getAttribute("data-sharetext");
+      let url = window.location.href.split("#")[0];
+      let button = e.target;
+      let type = button.getAttribute("data-type");
+      if (type == "whatsapp") {
+        window.open(
+          `https://api.whatsapp.com/send/?text=${encodeURIComponent(
+            mobimsg
+          )}%0A${encodeURIComponent(url)}`
+        );
+      } else if (type == "telegram") {
+        window.open(
+          `https://t.me/share/url?url=${encodeURIComponent(
+            url
+          )}&text=${encodeURIComponent(mobimsg)}`
+        );
+      } else if (type == "facebook") {
+        window.open(
+          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+            url
+          )}`
+        );
+      } else if (type == "email") {
+        window.open(
+          `mailto:?body=${encodeURIComponent(mobimsg)}%0A${encodeURIComponent(
+            url
+          )}`
+        );
+      }
+    });
+  });

@@ -8,7 +8,10 @@ $formid = rand(1,99999);
             <div class="text-xl font-semibold mb-6">
                 <p><?= $_ENV['i18n']['fragments']['newsletter-content'] ?></p>
             </div>
-            <form action="#" class="tmm-api-form mt-6" data-interface="newsletter">
+            <form action="#" class="tmm-api-form mt-6" data-type="message" data-endpoint="newsletter">
+                <div class="tmm-response-alert border-4 border-accent-120 bg-accent-30 text-accent-120 my-4 leading-none p-2 rounded" hidden>
+                    <span class="tmm-response-message tmm-graph text-xl"></span>
+                </div>
                 <div class="tmm-form-wrapper">
                     <div class="tmm-form-group">
                         <label for="fname-<?=$formid?>"><?= $_ENV['i18n']['misc']['fname'] ?></label>
@@ -26,7 +29,8 @@ $formid = rand(1,99999);
                         <input type="checkbox" name="optin" id="optin-<?=$formid?>" class="tmm-form-input" checked>
                         <label for="optin-<?=$formid?>"><?= $_ENV['i18n']['misc']['optin'] ?></label>
                     </div>
-                    <button type="submit" class="tmm-button tmm-button-next"><?= $_ENV['i18n']['misc']['submit1'] ?></button>
+                    <input type="hidden" name="lang" value="<?= pll_current_language("slug") ?>">
+                    <button type="submit" class="tmm-button tmm-button-next"><?= $_ENV['i18n']['misc']['submit2'] ?></button>
                 </div>
             </form>
         </div>
