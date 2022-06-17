@@ -54,3 +54,7 @@ html {
     background-color: var(--accent-30);
     color: var(--accent-120);
 }
+
+:target {
+    padding-top: 5rem;
+}
