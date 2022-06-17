@@ -54,7 +54,7 @@ function prefix_nav_menu_classes($items, $menu, $args) {
 
 function tmm_cookie_shortcode($atts, $content = null) {
     ob_start();
-    echo('<a><button data-cc="c-settings" class="underline">' . $content . '</button></a>');
+    echo('<a><button data-cc="c-settings">' . $content . '</button></a>');
     return ob_get_clean();
 }
 
