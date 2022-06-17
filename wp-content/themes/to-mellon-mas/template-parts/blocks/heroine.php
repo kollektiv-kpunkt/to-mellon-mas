@@ -74,10 +74,10 @@ $formid = rand(1,99999);
                     <p><tmm-negative><?= $_ENV['i18n']['misc']['finalthx'] ?></tmm-negative></p>
                     <p class="mb-4"><?= $_ENV['i18n']['misc']['mobi'] ?></p>
                     <div class="flex flex-wrap gap-2 mt-2 tmm-share-buttons" data-sharetext="<?= $_ENV['i18n']['misc']['mobiMSG'] ?>">
-                        <button data-type="whatsapp" href="#" class="tmm-button">Auf WhatsApp teilen</button>
-                        <button data-type="telegram" href="#" class="tmm-button">Auf Telegram teilen</button>
-                        <button data-type="facebook" href="#" class="tmm-button" >Auf Facebook teilen</button>
-                        <button data-type="email" href="#" class="tmm-button tmm-button-neg tmm-button-line tmm-button-next">Per Mail teilen</button>
+                        <button data-type="whatsapp" href="#" class="tmm-button"><?= $_ENV['i18n']['misc']['shareWA'] ?></button>
+                        <button data-type="telegram" href="#" class="tmm-button"><?= $_ENV['i18n']['misc']['shareTele'] ?></button>
+                        <button data-type="facebook" href="#" class="tmm-button" ><?= $_ENV['i18n']['misc']['shareFB'] ?></button>
+                        <button data-type="email" href="#" class="tmm-button tmm-button-neg tmm-button-line tmm-button-next"><?= $_ENV['i18n']['misc']['shareMail'] ?></button>
                     </div>
                     <input type="hidden" name="formData">
                 </div>

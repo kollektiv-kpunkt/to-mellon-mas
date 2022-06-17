@@ -3,11 +3,27 @@
         "fname" : "Prenom",
         "lname" : "Nom",
         "email" : "Adresse courriel",
+        "supportthx" : "Merci de nous soutenir ! Merci de nous indiquer combien de signatures tu peux récolter pour nous.",
         "zip" : "CPA",
+        "noSigns" : "Nombre de signatures",
+        "noPrinterPrompt" : "Pour que nous puissions t'envoyer tes feuilles, nous avons encore besoin de ton adresse complète.",
+        "street" : "Rue / No.",
+        "city" : "Lieu",
+        "canton" : "Canton",
         "printer" : "Je n'ai pas d'imprimante et je souhaite donc recevoir mes feuilles par courrier.",
         "optin" : "J'accepte d'être tenu au courant par la JS Suisse.<br><a href='/protection-des-donnees'>Plus de détails sur la protection des données</a>.",
-        "submit1" : "Je participe",
-        "submitdonate" : "Faire un don"
+        "submit1" : "Continuer",
+        "submit2" : "Je participe",
+        "submit3" : "Envoyer",
+        "finalthx" : "Merci pour tes signatures ! Nous t'enverrons un e-mail dès que nous commencerons notre collecte de signatures !",
+        "mobi" : "Pour que nous puissions atteindre le plus grand nombre possible de personnes qui nous soutiennent dans la collecte de 100'000 signatures, nous te serions méga reconnaissants de partager cette page avec le plus grand nombre de personnes possible !",
+        "mobiMSG" : "Salut ! 👋\nJe viens de promettre de récolter des signatures pour la nouvelle initiative de la JUSO Suisse ! Est-ce que tu nous aideras aussi ? ✨",
+        "shareWA" : "Partager sur WhatsApp",
+        "shareFB" : "Partager sur Facebook",
+        "shareTele" : "Partager sur Telegram",
+        "shareMail" : "Partager par e-mail",
+        "submitdonate" : "Faire un don",
+        "subscriptionThx" : "Merci de t'être abonné à notre newsletter !"
     },
     "fragments" : {
         "donate-title" : "Ton don pour notre avenir !",
@@ -15,5 +31,8 @@
         "newsletter-title" : "Sois de la partie !",
         "newsletter-content" : "Avec l'initiative d'avenir, nous mettons les gaz pour la justice climatique. Abonne-toi à notre newsletter et sois toujours au courant des dernières nouvelles !",
         "explain-container-content" : "Initiativtexte sind kompliziert, das wissen wir: C'est pourquoi nous t'avons expliqué ici les termes les plus importants du texte. <b class='text-accent'>Clique sur les <i class='fas fa-info-circle text-accent'></i>-Symbole dans le texte pour qu'une brève explication s'affiche ici !</b>"
+    },
+    "pages" : {
+        "donate" : "/fair-un-don"
     }
 }

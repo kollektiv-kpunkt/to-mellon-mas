@@ -3,3 +3,4 @@ import "./components/forms.js";
 import "./components/navbar.js";
 import "./components/explain.js";
 import "./components/donate.js";
+import "./components/cookies.js";

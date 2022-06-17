@@ -26,6 +26,6 @@ if (is_front_page()) {
 <?php
 get_template_part( "template-parts/elements/mobilemenu");
 ?>
-<body>
+<body data-current-lang="<?= pll_current_language("slug") ?>">
 
     <div id="main-content">

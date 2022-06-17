@@ -18,7 +18,10 @@
         "finalthx" : "Danke für deine Unterschriften! Wir werden dir eine E-Mail schicken, sobald wir mit unserer Unterschriftensammlung anfangen!",
         "mobi" : "Damit wir möglichst viele Menschen erreichen, die uns bei der Sammlung von 100'000 Unterschriften unterstützen, wären wir dir mega dankbar, wenn du diese Seite mit möglichst vielen Leuten teilst!",
         "mobiMSG" : "Hoi! 👋\nIch habe gerade versprochen für die neue Initiative der JUSO Schweiz Unterschriften zu sammeln! Hilfst du auch mit? ✨",
-        "shareWA" : "",
+        "shareWA" : "Auf WhatsApp teilen",
+        "shareFB" : "Auf Facebook teilen",
+        "shareTele" : "Auf Telegram teilen",
+        "shareMail" : "Per E-Mail teilen",
         "submitdonate" : "Jetzt spenden",
         "subscriptionThx" : "Danke, dass du unseren Newsletter abonniert hast!"
     },

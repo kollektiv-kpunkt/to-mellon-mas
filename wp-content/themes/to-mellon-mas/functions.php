@@ -1,4 +1,8 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad();
+
 /* tmm */
 if(pll_current_language("slug")) {
     $_ENV["i18n"] = json_decode(file_get_contents(__DIR__ . "/i18n/" . pll_current_language("slug") . ".json"), true);
