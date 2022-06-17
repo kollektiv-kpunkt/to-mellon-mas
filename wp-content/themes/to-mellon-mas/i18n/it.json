@@ -4,6 +4,7 @@
         "lname" : "Cognome",
         "email" : "Indirizzo e-mail",
         "zip" : "CAP",
+        "printer" : "Non ho una stampante e vorrei quindi ricevere i miei fogli per posta.",
         "optin" : "Accetto che GISO Svizzera mi tenga informato.<br><a href='/protezione-dei-dati'>Più informazioni sulla protezione dei dati</a>",
         "submit1" : "Sono in",
         "submitdonate" : "Donare ora"

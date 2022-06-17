@@ -4,6 +4,7 @@
         "lname" : "Nom",
         "email" : "Adresse courriel",
         "zip" : "CPA",
+        "printer" : "Je n'ai pas d'imprimante et je souhaite donc recevoir mes feuilles par courrier.",
         "optin" : "J'accepte d'être tenu au courant par la JS Suisse.<br><a href='/protection-des-donnees'>Plus de détails sur la protection des données</a>.",
         "submit1" : "Je participe",
         "submitdonate" : "Faire un don"

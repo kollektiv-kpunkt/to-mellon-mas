@@ -4,6 +4,7 @@
         "lname" : "Nachname",
         "email" : "E-Mail Adresse",
         "zip" : "PLZ",
+        "printer" : "Ich habe keinen Drucker und möchte deshalb meine Bögen per Post erhalten.",
         "optin" : "Ich bin einverstanden, dass mich die JUSO Schweiz auf dem Laufenden halten darf.<br><a href='/datenschutz'>Mehr zum Datenschutz</a>",
         "submit1" : "Ich bin dabei",
         "submitdonate" : "Jetzt spenden"
