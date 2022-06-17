@@ -28,5 +28,8 @@
         "newsletter-title" : "Sei dabei!",
         "newsletter-content" : "Mit der Zukunftsinitiative geben wir Vollgas für die Klimagerechtigkeit. Abboniere unseren Newsletter und bleibe immer auf dem Laufenden!",
         "explain-container-content" : "Initiativtexte sind kompliziert, das wissen wir: Darum haben wir dir die wichtigsten Begriffe im Text hier erklärt. <b class='text-accent'>Klicke auf die <i class='fas fa-info-circle text-accent'></i>-Symbole im Text, damit dir hier eine kurze Erklärung angezeigt wird!</b>"
+    },
+    "pages" : {
+        "donate" : "/spenden"
     }
 }

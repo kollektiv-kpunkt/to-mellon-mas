@@ -13,7 +13,7 @@ $iconSVG = file_get_contents( __DIR__ . '/../elements/img/icon.svg' );
             foreach($boxes as $box) :
                 if ($box == "custom"):
                     ?>
-                    <div class="tmm-donate-box flex tmm-graph<?= ($i == 1) ? " tmm-donate-box-selected" : "" ?>">
+                    <div data-donate-type="custom" class="tmm-donate-box flex tmm-graph<?= ($i == 1) ? " tmm-donate-box-selected" : "" ?>">
                         <input type="number" class="tmm-donate-box-custom"/>
                         <span class="tmm-donate-box-currency">CHF</span>
                     </div>
@@ -21,7 +21,7 @@ $iconSVG = file_get_contents( __DIR__ . '/../elements/img/icon.svg' );
                     continue;
                 endif;
             ?>
-                <div class="tmm-donate-box flex tmm-graph<?= ($i == 1) ? " tmm-donate-box-selected" : "" ?>">
+                <div data-donate-type="amount" class="tmm-donate-box flex tmm-graph<?= ($i == 1) ? " tmm-donate-box-selected" : "" ?>">
                     <span class="tmm-donate-box-amount" data-amount="<?= $box ?>"><?= $box ?></span>
                     <span class="tmm-donate-box-currency">CHF</span>
                 </div>
@@ -29,7 +29,7 @@ $iconSVG = file_get_contents( __DIR__ . '/../elements/img/icon.svg' );
             $i++;
             endforeach;
             ?>
-            <button class="tmm-donate-submit tmm-button tmm-button-neg tmm-button-next w-full"><?= $_ENV['i18n']['misc']['submitdonate'] ?></button>
+            <button class="tmm-donate-submit tmm-button tmm-button-neg tmm-button-next w-full" data-link="<?= $_ENV['i18n']['pages']['donate'] ?>"><?= $_ENV['i18n']['misc']['submitdonate'] ?></button>
         </div>
     </div>
 
