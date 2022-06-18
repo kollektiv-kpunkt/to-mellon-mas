@@ -11,7 +11,7 @@ $mcload = [
         "NOSIGNS" => $data["noSigns"],
         "ZIP" => $data["zip"],
     ],
-    'tags' => [],
+    'tags' => ["pledge_done"],
     "status" => "subscribed",
 ];
 
