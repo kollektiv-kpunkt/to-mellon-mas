@@ -6,7 +6,7 @@ nav#tmm-nav-wrapper {
     left: 0;
     width: 100%;
     z-index: 100;
-    transition: 0.25s ease background-color, 0.25s ease transform;
+    transition: 0.25s ease background-color, 0.25s ease transform, 0.25s ease opacity;
 
     a {
         &.tmm-menu-item {
@@ -15,11 +15,6 @@ nav#tmm-nav-wrapper {
 
         --linkcolor: white;
         --linkhover: var(--accent);
-
-        &.tmm-menu-item-current {
-            background-size: 100% 100%;
-            color: var(--linkhover);
-        }
     }
 
     .tmm-navbar-mobile {

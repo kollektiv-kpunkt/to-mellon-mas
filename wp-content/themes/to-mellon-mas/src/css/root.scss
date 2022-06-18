@@ -55,6 +55,6 @@ html {
     color: var(--accent-120);
 }
 
-:target {
-    padding-top: 5rem;
+:target:not(#mitmachen) {
+    padding-top: 2rem;
 }

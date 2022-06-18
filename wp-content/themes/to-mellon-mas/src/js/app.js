@@ -4,3 +4,4 @@ import "./components/navbar.js";
 import "./components/explain.js";
 import "./components/donate.js";
 import "./components/cookies.js";
+import "./components/loader.js";

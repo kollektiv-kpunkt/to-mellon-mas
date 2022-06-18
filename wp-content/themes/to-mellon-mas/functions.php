@@ -60,6 +60,21 @@ function tmm_cookie_shortcode($atts, $content = null) {
 
 add_shortcode('tmm-cookie-settings', 'tmm_cookie_shortcode');
 
+function tmm_marking_shortcode($atts, $content = null) {
+    $args = shortcode_atts( array(
+        "white" => FALSE,
+    ), $atts, "tmm" );
+    ob_start();
+    if ($args["white"]) {
+        echo('<tmm-negative>' . $content . '</tmm-negative>');
+    } else {
+        echo('<tmm>' . $content . '</tmm>');
+    }
+    return ob_get_clean();
+}
+
+add_shortcode('tmm', 'tmm_marking_shortcode');
+
 function tmm_explain_shortcode($atts, $content = null) {
     ob_start();
     echo('<a class="tmm-explain-link" data-explanation="' . $content . '"></a>');

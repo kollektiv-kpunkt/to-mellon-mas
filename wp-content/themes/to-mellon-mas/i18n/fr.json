@@ -33,6 +33,6 @@
         "explain-container-content" : "Initiativtexte sind kompliziert, das wissen wir: C'est pourquoi nous t'avons expliqué ici les termes les plus importants du texte. <b class='text-accent'>Clique sur les <i class='fas fa-info-circle text-accent'></i>-Symbole dans le texte pour qu'une brève explication s'affiche ici !</b>"
     },
     "pages" : {
-        "donate" : "/fair-un-don"
+        "donate" : "/faire-un-don"
     }
 }

@@ -8,6 +8,10 @@ if (is_front_page()) {
     $rootclasses .= " tmm-frontpage";
 }
 
+if (!isset($_COOKIE["tmm-loader"])) {
+    $rootclasses .= " noscroll";
+}
+
 ?>
 <html <?php language_attributes(); ?> class="<?= $rootclasses ?>" data-design-system="<?= $designSystem ?>">
 <head>
@@ -18,6 +22,11 @@ if (is_front_page()) {
     wp_head();
     ?>
 </head>
+<?php
+if (!isset($_COOKIE["tmm-loader"])) {
+    get_template_part( "template-parts/elements/loader");
+}
+?>
 <nav id="tmm-nav-wrapper">
     <?php
     get_template_part( "template-parts/elements/navbar");
