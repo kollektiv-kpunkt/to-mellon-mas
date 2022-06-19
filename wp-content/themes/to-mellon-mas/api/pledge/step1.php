@@ -26,6 +26,7 @@ $contactdata = [
 
 if (isset($data["optin"])) {
     array_push($contactdata["tags"], "optin");
+    array_push($contactdata["tags"], "newsletter");
 }
 
 if (isset($data["source"]) && $data["source"] != "") {
