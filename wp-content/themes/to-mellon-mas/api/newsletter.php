@@ -6,6 +6,10 @@ if($json = json_decode(file_get_contents("php://input"), true)) {
 }
 $_ENV["i18n"] = json_decode(file_get_contents(__DIR__ . "/../i18n/" . $data["lang"] . ".json"), true);
 
+if (isset($_COOKIE["mtm_consent"])) {
+    $mtm->doTrackEvent("CtA Action", "Newsletter", $data["uuid"]);
+}
+
 $listdata = $contactApi->getList("email:" . $data["email"]);
 
 $contactdata = [

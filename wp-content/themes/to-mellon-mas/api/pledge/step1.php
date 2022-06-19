@@ -1,8 +1,17 @@
 <?php
+
 if($json = json_decode(file_get_contents("php://input"), true)) {
     $data = $json;
 } else {
     $data = $_POST;
+}
+
+if (isset($_COOKIE["mtm_consent"])) {
+    try {
+        $mtm->doTrackEvent("Pledge", "Step 1", 1);
+    } catch (GuzzleHttp\Exception\ClientException $e) {
+        // Do nothing
+    }
 }
 
 $listdata = $contactApi->getList("email:" . $data["email"]);

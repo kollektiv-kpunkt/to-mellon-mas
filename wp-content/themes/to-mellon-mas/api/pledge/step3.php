@@ -5,6 +5,10 @@ if($json = json_decode(file_get_contents("php://input"), true)) {
     $data = setupFormdata($_POST);
 }
 
+if (isset($_COOKIE["mtm_consent"])) {
+    $mtm->doTrackEvent("Pledge", "Step 3", $data["uuid"]);
+}
+
 $contactdata = [
     'address1' => $data['street'],
     'city' => $data['city'],
