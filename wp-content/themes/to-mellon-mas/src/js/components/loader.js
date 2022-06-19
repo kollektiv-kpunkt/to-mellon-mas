@@ -24,8 +24,8 @@ function animateLoader() {
 window.addEventListener("load", function () {
   if (document.querySelector(".tmm-loader")) {
     setTimeout(() => {
-      document.querySelector(".tmm-loader-content-wrapper").opacity = 1;
-      animateLoader;
+      document.querySelector(".tmm-loader-content").style.opacity = 1;
+      animateLoader();
     }, 500);
   }
 });
