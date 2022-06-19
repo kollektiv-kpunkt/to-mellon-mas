@@ -98,3 +98,16 @@
     content: "\f14a";
     color: var(--formcolor);
 }
+
+.tmm-form-overlay {
+    z-index: 100000000;
+    backdrop-filter: blur(0.5rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s ease opacity, 0.25s ease visibility;
+}
+
+.tmm-form-overlay.tmm-form-overlay-visible {
+    opacity: 1;
+    visibility: visible;
+}

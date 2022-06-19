@@ -8,7 +8,7 @@ $formid = rand(1,99999);
             <div class="text-xl font-semibold mb-6">
                 <p><?= $_ENV['i18n']['fragments']['newsletter-content'] ?></p>
             </div>
-            <form action="#" class="tmm-api-form mt-6" data-type="message" data-endpoint="newsletter">
+            <form action="#" class="tmm-api-form mt-6" data-type="message" data-endpoint="newsletter" data-overlay="overlay-<?= $formid ?>">
                 <div class="tmm-response-alert border-4 border-accent-120 bg-accent-30 text-accent-120 my-4 leading-none p-2 rounded" hidden>
                     <span class="tmm-response-message tmm-graph text-xl"></span>
                 </div>
@@ -45,4 +45,11 @@ $formid = rand(1,99999);
             </div>
         </div>
     </div>
+</div>
+
+<div class="tmm-form-overlay fixed top-0 left-0 w-full h-full" id="overlay-<?= $formid ?>">
+    <div class="absolute top-0 left-0 w-full h-full z-50 tmm-form-overlay-content flex justify-center items-center text-4xl tmm-graph text-white">
+        Loading...
+    </div>
+    <div class="absolute top-0 left-0 w-full h-full bg-accent-120 z-40 opacity-80 tmm-form-overlay-blind"></div>
 </div>

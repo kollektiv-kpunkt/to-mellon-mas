@@ -8,7 +8,7 @@
   (function() {
     var u="<?= $_ENV["MATOMOSRC"] ?>";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '<?= $_ENV["MATOMOID"] ?>']);
+    _paq.push(['setSiteId', '<?= $_ENV["i18n"]["MMID"] ?>']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();

@@ -1,4 +1,5 @@
 {
+    "MMID" : 1,
     "misc" : {
         "fname" : "Vorname",
         "lname" : "Nachname",
@@ -23,7 +24,8 @@
         "shareTele" : "Auf Telegram teilen",
         "shareMail" : "Per E-Mail teilen",
         "submitdonate" : "Jetzt spenden",
-        "subscriptionThx" : "Danke, dass du unseren Newsletter abonniert hast!"
+        "subscriptionThx" : "Danke, dass du unseren Newsletter abonniert hast!",
+        "selectCanton" : "Bitte wähle deinen Kanton"
     },
     "fragments" : {
         "donate-title" : "Deine Spende für unsere Zukunft!",
@@ -34,5 +36,33 @@
     },
     "pages" : {
         "donate" : "/spenden"
+    },
+    "cantons" : {
+        "Zurich" : "Zürich",
+        "Bern" : "Bern",
+        "Luzern" : "Luzern",
+        "Uri" : "Uri",
+        "Schwyz" : "Schwyz",
+        "Obwalden" : "Obwalden",
+        "Nidwalden" : "Nidwalden",
+        "Glarus" : "Glarus",
+        "Zug" : "Zug",
+        "Fribourg" : "Freiburg",
+        "Solothurn" : "Solothurn",
+        "Basel-Stadt" : "Basel-Stadt",
+        "Basel-Landschaft" : "Basel-Landschaft",
+        "Schaffhausen" : "Schaffhausen",
+        "Appenzell Ausserrhoden" : "Appenzell Ausserrhoden",
+        "Appenzell Innerrhoden" : "Appenzell Innerrhoden",
+        "Sankt Gallen" : "St. Gallen",
+        "Graubunden" : "Graubünden",
+        "Aargau" : "Aargau",
+        "Thurgau" : "Thurgau",
+        "Ticino" : "Tessin",
+        "Vaud" : "Waadt",
+        "Valais" : "Wallis",
+        "Neuchatel" : "Neuenburg",
+        "Geneva" : "Genf",
+        "Jura" : "Jura"
     }
 }

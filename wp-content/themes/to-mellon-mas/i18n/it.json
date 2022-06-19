@@ -1,4 +1,5 @@
 {
+    "MMID" : 3,
     "misc" : {
         "fname" : "Nome",
         "lname" : "Cognome",
@@ -23,7 +24,8 @@
         "shareTele" : "Condividere su Telegram",
         "shareMail" : "Condividere via e-mail",
         "submitdonate" : "Donare ora",
-        "subscriptionThx" : "Grazie per esservi iscritti alla nostra newsletter!"
+        "subscriptionThx" : "Grazie per esservi iscritti alla nostra newsletter!",
+        "selectCanton" : "Scegliete il tuo cantone"
     },
     "fragments" : {
         "donate-title" : "La vostra donazione per il nostro futuro!",
@@ -34,5 +36,33 @@
     },
     "pages" : {
         "donate" : "/donare"
+    },
+    "cantons" : {
+        "Zurich" : "Zurigo",
+        "Bern" : "Berna",
+        "Luzern" : "Lucerna",
+        "Uri" : "Uri",
+        "Schwyz" : "Svitto",
+        "Obwalden" : "Obvaldo",
+        "Nidwalden" : "Nidvaldo",
+        "Glarus" : "Glarona",
+        "Zug" : "Zugo",
+        "Fribourg" : "Friburgo",
+        "Solothurn" : "Soletta",
+        "Basel-Stadt" : "Basilea Città",
+        "Basel-Landschaft" : "Basilea Campagna",
+        "Schaffhausen" : "Sciaffusa",
+        "Appenzell Ausserrhoden" : "Appenzello Esterno",
+        "Appenzell Innerrhoden" : "Appenzello Interno",
+        "Sankt Gallen" : "San Gallo",
+        "Graubunden" : "Grigioni",
+        "Aargau" : "Argovia",
+        "Thurgau" : "Turgovia",
+        "Ticino" : "Ticino",
+        "Vaud" : "Vaud",
+        "Valais" : "Vallese",
+        "Neuchatel" : "Neuchâtel",
+        "Geneva" : "Ginevra",
+        "Jura" : "Giura"
     }
 }

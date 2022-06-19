@@ -97,19 +97,19 @@ cookieconsent.run({
             cookie_table: [
               {
                 col1: "_pk_ses",
-                col2: "analytics.wahlen-23.ch",
+                col2: "analytics.zukunft-initiative.ch",
                 col3: "30 Minuten",
                 col4: "Session-ID für Matomo Analytics",
               },
               {
                 col1: "_pk_id",
-                col2: "analytics.wahlen-23.ch",
+                col2: "analytics.zukunft-initiative.ch",
                 col3: "1 Jahr",
                 col4: "User-ID für Matomo Analytics",
               },
               {
                 col1: "mtm_consent",
-                col2: "analytics.timothyoesch.ch",
+                col2: "analytics.zukunft-initiative.ch",
                 col3: "30 Jahre",
                 col4: "Zustimmungserklärung zum Tracking durch Matomo Analytics",
               },
@@ -177,19 +177,19 @@ cookieconsent.run({
             cookie_table: [
               {
                 col1: "_pk_ses",
-                col2: "analytics.wahlen-23.ch",
+                col2: "analytics.zukunft-initiative.ch",
                 col3: "30 Minutes",
                 col4: "ID de session pour Matomo Analytics",
               },
               {
                 col1: "_pk_id",
-                col2: "analytics.wahlen-23.ch",
+                col2: "analytics.zukunft-initiative.ch",
                 col3: "1 an",
                 col4: "ID utilisateur pour Matomo Analytics",
               },
               {
                 col1: "mtm_consent",
-                col2: "analytics.timothyoesch.ch",
+                col2: "analytics.zukunft-initiative.ch",
                 col3: "30 ans",
                 col4: "Déclaration de consentement au tracking par Matomo Analytics",
               },
@@ -257,19 +257,19 @@ cookieconsent.run({
             cookie_table: [
               {
                 col1: "_pk_ses",
-                col2: "analytics.wahlen-23.ch",
+                col2: "analytics.zukunft-initiative.ch",
                 col3: "30 minuti",
                 col4: "ID di sessione per Matomo Analytics",
               },
               {
                 col1: "_pk_id",
-                col2: "analytics.wahlen-23.ch",
+                col2: "analytics.zukunft-initiative.ch",
                 col3: "1 anno",
                 col4: "ID utente per Matomo Analytics",
               },
               {
                 col1: "mtm_consent",
-                col2: "analytics.timothyoesch.ch",
+                col2: "analytics.zukunft-initiative.ch",
                 col3: "30 anni",
                 col4: "Dichiarazione di consenso al tracciamento da parte di Matomo Analytics",
               },

@@ -5,36 +5,15 @@ if($json = json_decode(file_get_contents("php://input"), true)) {
     $data = setupFormdata($_POST);
 }
 
-$mcload = [
-    "email_address" => $data["email"],
-    'merge_fields' => [
-        "NOSIGNS" => $data["noSigns"],
-        "ZIP" => $data["zip"],
-    ],
-    'tags' => ["pledge_done"],
-    "status" => "subscribed",
+$contactdata = [
+    'nosigns' => $data['noSigns'],
+    'zipcode' => $data['zip'],
+    "form_uuid" => $data["uuid"],
+    'tags' => ["pledge_project21"],
 ];
 
 if ($data["noSigns"] > 10) {
-    array_push($mcload["tags"], "Supersammler*in");
-}
-
-try {
-    $response = $client->lists->setListMember($mclistid, strtolower(md5($data["email"])), $mcload);
-} catch (GuzzleHttp\Exception\ClientException $e) {
-    $return = [
-      "sucess" => false,
-      "message" => "Something went wrong, please try again later.",
-      "content" => $e->getResponse()->getBody()->getContents(),
-      "errors" => [$e->getMessage()]
-    ];
-    echo json_encode($return);
-    exit;
-}
-
-if (!$response) {
-    echo(json_encode(["success" => false]));
-    exit;
+    array_push($contactdata["tags"], "Supersammler*in Porject21");
 }
 
 if (isset($data["printer"])) {
@@ -42,6 +21,8 @@ if (isset($data["printer"])) {
 } else {
     $nextStep = 4;
 }
+
+$contactApi->edit($data['mauID'], $contactdata);
 
 $return = [
     "success" => true,

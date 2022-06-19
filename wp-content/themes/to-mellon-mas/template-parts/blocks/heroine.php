@@ -9,7 +9,7 @@ $formid = rand(1,99999);
             <div class="tmm-heroine-content text-white my-auto text-center">
                 <h1 class="text-7xl mb-4"><?= the_field("title") ?></h1>
                 <div class="text-xl font-semibold"><?= the_field("content") ?></div>
-                <form action="#" class="tmm-api-form mt-6" data-type="multistep" data-namespace="pledge-<?= $formid ?>" data-step="1" data-endpoint="pledge/step1">
+                <form action="#" class="tmm-api-form mt-6" data-type="multistep" data-namespace="pledge-<?= $formid ?>" data-step="1" data-endpoint="pledge/step1" data-overlay="overlay-<?= $formid ?>">
                     <div class="tmm-form-wrapper tmm-form-white">
                         <div class="tmm-form-group">
                             <label for="fname-<?=$formid?>"><?= $_ENV['i18n']['misc']['fname'] ?></label>
@@ -36,7 +36,7 @@ $formid = rand(1,99999);
                         <button type="submit" class="tmm-button tmm-button-neg tmm-button-next"><?= $_ENV['i18n']['misc']['submit1'] ?></button>
                     </div>
                 </form>
-                <form action="#" class="tmm-api-form mt-6" data-type="multistep" data-namespace="pledge-<?= $formid ?>" data-step="2" data-endpoint="pledge/step2" hidden>
+                <form action="#" class="tmm-api-form mt-6" data-type="multistep" data-namespace="pledge-<?= $formid ?>" data-step="2" data-endpoint="pledge/step2" data-overlay="overlay-<?= $formid ?>" hidden>
                     <div class="tmm-form-wrapper tmm-form-white">
                         <p><tmm-negative><?= $_ENV['i18n']['misc']['supportthx'] ?></tmm-negative></p>
                         <div class="tmm-form-group">
@@ -51,7 +51,7 @@ $formid = rand(1,99999);
                         <button type="submit" class="tmm-button tmm-button-neg tmm-button-next"><?= $_ENV['i18n']['misc']['submit2'] ?></button>
                     </div>
                 </form>
-                <form action="#" class="tmm-api-form mt-6" data-type="multistep" data-namespace="pledge-<?= $formid ?>" data-step="3" data-endpoint="pledge/step3" hidden>
+                <form action="#" class="tmm-api-form mt-6" data-type="multistep" data-namespace="pledge-<?= $formid ?>" data-step="3" data-endpoint="pledge/step3" data-overlay="overlay-<?= $formid ?>" hidden>
                     <div class="tmm-form-wrapper tmm-form-white">
                         <p><tmm-negative><?= $_ENV['i18n']['misc']['noPrinterPrompt'] ?></tmm-negative></p>
                         <div class="tmm-form-group tmm-form-group-fullwidth">
@@ -64,7 +64,16 @@ $formid = rand(1,99999);
                         </div>
                         <div class="tmm-form-group">
                             <label for="canton-<?=$formid?>"><?= $_ENV['i18n']['misc']['canton'] ?></label>
-                            <input type="text" name="canton" id="canton-<?=$formid?>" class="tmm-form-input" required>
+                            <select name="canton" class="text-accent h-full" id="canton-<?=$formid?>" required>
+                                <option value="" selected disabled hidden><?= $_ENV['i18n']['misc']['selectCanton'] ?></option>
+                                <?php
+                                foreach ($_ENV['i18n']['cantons'] as $value => $canton) :
+                                ?>
+                                <option value="<?= $value ?>"><?= $canton ?></option>
+                                <?php
+                                endforeach;
+                                ?>
+                            </select>
                         </div>
                         <input type="hidden" name="formData">
                         <button type="submit" class="tmm-button tmm-button-neg tmm-button-next"><?= $_ENV['i18n']['misc']['submit3'] ?></button>
@@ -89,4 +98,11 @@ $formid = rand(1,99999);
         get_template_part( "template-parts/elements/spaghetti");
         ?>
     </div>
+</div>
+
+<div class="tmm-form-overlay fixed top-0 left-0 w-full h-full" id="overlay-<?= $formid ?>">
+    <div class="absolute top-0 left-0 w-full h-full z-50 tmm-form-overlay-content flex justify-center items-center text-4xl tmm-graph text-white">
+        Loading...
+    </div>
+    <div class="absolute top-0 left-0 w-full h-full bg-accent-120 z-40 opacity-80 tmm-form-overlay-blind"></div>
 </div>

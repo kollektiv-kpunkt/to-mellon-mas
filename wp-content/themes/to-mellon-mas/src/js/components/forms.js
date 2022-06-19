@@ -5,6 +5,10 @@ const formUUID = uuidv4();
 function formLogic(form) {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    let overlay = document.querySelector(
+      `#${this.getAttribute("data-overlay")}`
+    );
+    overlay.classList.add("tmm-form-overlay-visible");
 
     let endpoint = this.getAttribute("data-endpoint");
     var formData = {};
@@ -53,6 +57,7 @@ function formLogic(form) {
         this.reset();
         alert.hidden = false;
       }
+      overlay.classList.remove("tmm-form-overlay-visible");
     })();
   });
 }

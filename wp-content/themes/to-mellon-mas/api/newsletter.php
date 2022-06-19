@@ -6,60 +6,26 @@ if($json = json_decode(file_get_contents("php://input"), true)) {
 }
 $_ENV["i18n"] = json_decode(file_get_contents(__DIR__ . "/../i18n/" . $data["lang"] . ".json"), true);
 
-$mcload = [
-    "email_address" => $data["email"],
-    'merge_fields' => [
-        "FNAME" => $data["fname"],
-        "LNAME" => $data["lname"],
-    ],
-    'tags' => [],
-    "status" => "subscribed",
+$listdata = $contactApi->getList("email:" . $data["email"]);
+
+$contactdata = [
+    "email" => $data["email"],
+    'firstname' => $data['fname'],
+    'lastname' => $data['lname'],
+    "form_uuid" => $data["uuid"],
+    'tags' => ["lang_" . $data["lang"], "newsletter"],
 ];
 
 if (isset($data["optin"])) {
-    array_push($mcload["tags"], "optin");
+    array_push($contactdata["tags"], "optin");
 }
 
-try {
-    $response = $client->lists->setListMember($mclistid, strtolower(md5($data["email"])), $mcload);
-} catch (GuzzleHttp\Exception\ClientException $e) {
-    $return = [
-      "sucess" => false,
-      "message" => "Something went wrong, please try again later.",
-      "content" => $e->getResponse()->getBody()->getContents(),
-      "errors" => [$e->getMessage()]
-    ];
-    echo json_encode($return);
-    exit;
-}
-
-if (!$response) {
-    echo(json_encode(["success" => false]));
-    exit;
-}
-
-try {
-    $response = $client->lists->createListMemberNote(
-        $mclistid,
-        strtolower(md5($data["email"])),
-        [
-            "note" => "Form submission: " . $data["uuid"]
-        ]
-    );
-} catch (GuzzleHttp\Exception\ClientException $e) {
-    $return = [
-      "sucess" => false,
-      "message" => "Something went wrong, please try again later.",
-      "content" => $e->getResponse()->getBody()->getContents(),
-      "errors" => [$e->getMessage()]
-    ];
-    echo json_encode($return);
-    exit;
-}
-
-if (!$response) {
-    echo(json_encode(["success" => false]));
-    exit;
+if ($listdata["total"] > 0) {
+    $contactApi->edit(array_values($listdata["contacts"])[0]['id'], $contactdata);
+} else {
+    $response = $contactApi->create($contactdata);
+    $contact  = $response[$contactApi->itemName()];
+    $data["mauID"] = $contact["id"];
 }
 
 $return = [
