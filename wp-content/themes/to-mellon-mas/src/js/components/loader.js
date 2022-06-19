@@ -23,7 +23,10 @@ function animateLoader() {
 
 window.addEventListener("load", function () {
   if (document.querySelector(".tmm-loader")) {
-    setTimeout(animateLoader, 500);
+    setTimeout(() => {
+      document.querySelector(".tmm-loader-content-wrapper").opacity = 1;
+      animateLoader;
+    }, 500);
   }
 });
 
