@@ -22,7 +22,7 @@ $contactdata = [
     "email" => $data["email"],
     'firstname' => $data['fname'],
     'lastname' => $data['lname'],
-    "form_uuid" => $data["uuid"],
+    "form_uuid" => "Pledge: " . $data["uuid"],
     'tags' => ["lang_" . $data["lang"]],
 ];
 
