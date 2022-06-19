@@ -6,11 +6,13 @@ if($json = json_decode(file_get_contents("php://input"), true)) {
     $data = $_POST;
 }
 
+
+
 if (isset($_COOKIE["mtm_consent"])) {
     try {
         $mtm->doTrackEvent("Pledge", "Step 1", 1);
-    } catch (GuzzleHttp\Exception\ClientException $e) {
-        // Do nothing
+    } catch (Exception $e) {
+        file_put_contents(__DIR__ . "/../log/error.log", $e->getMessage() . "\n", FILE_APPEND);
     }
 }
 
