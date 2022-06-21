@@ -5,7 +5,7 @@
         "lname" : "Nom",
         "email" : "Adresse e-mail",
         "supportthx" : "Merci de nous soutenir ! Merci de nous indiquer combien de signatures tu peux récolter pour nous.",
-        "zip" : "CPA",
+        "zip" : "NPA",
         "noSigns" : "Nombre de signatures",
         "noPrinterPrompt" : "Pour que nous puissions t'envoyer tes feuilles, nous avons encore besoin de ton adresse complète.",
         "street" : "Rue / No.",
@@ -31,8 +31,8 @@
         "donate-title" : "Ton don pour notre avenir !",
         "donate-content" : "L'Initiative pour l'avenir pose la première pierre d'une politique climatique sociale et ouvre ainsi un nouveau chapitre de la politique climatique suisse. Pour que la campagne soit un succès total, nous avons besoin de chaque soutien. Merci beaucoup pour ton don en faveur de l'Initiative pour l'avenir.",
         "newsletter-title" : "Sois de la partie !",
-        "newsletter-content" : "Avec l'initiative d'avenir, nous mettons les gaz pour la justice climatique. Abonne-toi à notre newsletter et sois toujours au courant des dernières nouvelles !",
-        "explain-container-content" : "Les textes d'initiative sont compliqués, nous le savons : C'est pourquoi nous t'avons expliqué ici les termes les plus importants du texte. <b class='text-accent'>Clique sur les <i class='fas fa-info-circle text-accent'></i>-Symbole dans le texte pour qu'une brève explication s'affiche ici !</b>"
+        "newsletter-content" : "Avec l'initiative pour l'avenir, nous nous engageons pour la justice climatique. Abonne-toi à notre newsletter et sois toujours au courant des dernières nouvelles !",
+        "explain-container-content" : "Les textes d'initiative sont compliqués, nous le savons : C'est pourquoi nous t'avons expliqué ici les termes les plus importants du texte. <b class='text-accent'>Clique sur les symbole <i class='fas fa-info-circle text-accent'></i> dans le texte pour qu'une brève explication s'affiche ici !</b>"
     },
     "pages" : {
         "donate" : "/faire-un-don"

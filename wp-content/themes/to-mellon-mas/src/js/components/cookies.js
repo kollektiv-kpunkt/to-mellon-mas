@@ -129,7 +129,7 @@ cookieconsent.run({
         description:
           "Ce site web utilise des cookies essentiels qui garantissent le fonctionnement optimal du site et enregistrent votre comportement sur notre site web. Ces derniers ne sont installés qu'avec votre consentement.",
         primary_btn: {
-          text: "Accepter tous",
+          text: "Tout accepter",
           role: "accept_all",
         },
         secondary_btn: {
@@ -140,7 +140,7 @@ cookieconsent.run({
       settings_modal: {
         title: "Paramètres des cookies",
         save_settings_btn: "Enregistrer",
-        accept_all_btn: "Accepter tous",
+        accept_all_btn: "Tout accepter",
         reject_all_btn: "Refuser tout",
         close_btn_label: "Fermer",
         cookie_table_headers: [
@@ -207,9 +207,9 @@ cookieconsent.run({
       consent_modal: {
         title: "Utilizziamo i cookie!",
         description:
-          "Questo sito web utilizza cookie essenziali che garantiscono il funzionamento ottimale del sito e registrano il vostro comportamento sul nostro sito web. Questi ultimi vengono impostati solo con il vostro consenso.",
+          "Questo sito web utilizza i cookie essenziali che garantiscono il funzionamento ottimale del sito e registrano il vostro comportamento sul nostro sito web. Questi ultimi vengono impostati solo con il vostro consenso.",
         primary_btn: {
-          text: "Tutti accettano",
+          text: "Accetta",
           role: "accept_all",
         },
         secondary_btn: {
@@ -220,7 +220,7 @@ cookieconsent.run({
       settings_modal: {
         title: "Impostazioni dei cookie",
         save_settings_btn: "Risparmiare",
-        accept_all_btn: "Tutti accettano",
+        accept_all_btn: "Accetta",
         reject_all_btn: "Rifiutare tutti",
         close_btn_label: "Chiudere",
         cookie_table_headers: [

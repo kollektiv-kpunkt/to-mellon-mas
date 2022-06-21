@@ -4,7 +4,7 @@
         "fname" : "Nome",
         "lname" : "Cognome",
         "email" : "Indirizzo e-mail",
-        "supportthx" : "Grazie per averci sostenuto! Fateci sapere quante firme potete raccogliere per noi.",
+        "supportthx" : "Grazie per il sostegno! Quante firme potresti raccogliere per l’iniziativa?",
         "zip" : "CAP",
         "noSigns" : "Numero di firme",
         "noPrinterPrompt" : "Abbiamo ancora bisogno del vostro indirizzo completo per potervi inviare i fogli.",
@@ -12,13 +12,13 @@
         "city" : "Città",
         "canton" : "Cantone",
         "printer" : "Non ho una stampante e vorrei quindi ricevere i miei fogli per posta.",
-        "optin" : "Accetto che GISO Svizzera mi tenga informato.<br><a href='/protezione-dei-dati'>Più informazioni sulla protezione dei dati</a>",
+        "optin" : "Accetto che la GISO Svizzera mi tenga informat*.<br><a href='/protezione-dei-dati'>Più informazioni sulla protezione dei dati</a>",
         "submit1" : "Avanti",
         "submit2" : "Sono in",
         "submit3" : "Invia",
-        "finalthx" : "Grazie per le vostre firme! Vi invieremo un'e-mail non appena inizieremo a raccogliere le firme!",
-        "mobi" : "Per raggiungere il maggior numero possibile di persone che ci sostengano nella raccolta di 100.000 firme, vi saremmo molto grati se condivideste questa pagina con il maggior numero possibile di persone!",
-        "mobiMSG" : "Ciao! 👋\nI ho appena promesso di raccogliere le firme per la nuova iniziativa di JUSO Svizzera! Anche tu mi aiuterai? ✨",
+        "finalthx" : "Grazie per la tua promessa! Ti invieremo una e-mail non appena inizieremo a raccogliere firme!",
+        "mobi" : "Per raggiungere il maggior numero possibile di persone che ci sostengano nella raccolta di 100'000 firme, ci farebbe moltissimo piacere se condividessi questa pagina con il maggior numero possibile di persone!",
+        "mobiMSG" : "Ciao! 👋\nHo appena promesso di partecipare alla raccolta firme per la nuova iniziativa della GISO Svizzera! Mi aiuteresti anche tu? ✨",
         "shareWA" : "Condividere su WhatsApp",
         "shareFB" : "Condividere su Facebook",
         "shareTele" : "Condividere su Telegram",
@@ -28,11 +28,11 @@
         "selectCanton" : "Scegliete il tuo cantone"
     },
     "fragments" : {
-        "donate-title" : "La vostra donazione per il nostro futuro!",
-        "donate-content" : "L'Iniziativa per il Futuro posa la prima pietra di una politica climatica sociale e inizia così un nuovo capitolo della politica climatica svizzera. Per il successo della campagna abbiamo bisogno di tutto il sostegno possibile. Grazie mille per la tua donazione all'Iniziativa per il futuro.",
-        "newsletter-title" : "Siate presenti!",
-        "newsletter-content" : "Con l'Iniziativa per il futuro stiamo facendo un grande passo avanti per la giustizia climatica. Iscriviti alla nostra newsletter per rimanere al corrente delle ultime novità!",
-        "explain-container-content" : "Sappiamo che i testi delle iniziative sono complicati: Per questo motivo abbiamo spiegato qui i termini più importanti del testo. <b class='text-accent'>Cliccate sui <i class='fas fa-info-circle text-accent'></i>-simboli nel testo per una breve spiegazione!</b>"
+        "donate-title" : "La tua donazione per il nostro futuro!",
+        "donate-content" : "L'Iniziativa per il Futuro posa la prima pietra per una politica climatica sociale e inizia così un nuovo capitolo della politica climatica svizzera. Per il successo della campagna abbiamo bisogno di tutto il sostegno possibile. Grazie mille per la tua donazione all'Iniziativa per il Futuro.",
+        "newsletter-title" : "Sii presente!",
+        "newsletter-content" : "Con l'Iniziativa per il Futuro stiamo facendo un grande passo avanti per la giustizia climatica. Iscriviti alla nostra newsletter per rimanere al corrente delle ultime novità!",
+        "explain-container-content" : "Sappiamo che i testi delle iniziative sono complicati: per questo motivo abbiamo spiegato qui i termini più importanti del testo d’iniziativa. <b class='text-accent'>Clicca sul simbolo <i class='fas fa-info-circle text-accent'></i> nel testo per una breve spiegazione!</b>"
     },
     "pages" : {
         "donate" : "/donare"
