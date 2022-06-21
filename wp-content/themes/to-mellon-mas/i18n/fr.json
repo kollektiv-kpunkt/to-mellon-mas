@@ -1,9 +1,9 @@
 {
     "MMID" : 2,
     "misc" : {
-        "fname" : "Prenom",
+        "fname" : "Prénom",
         "lname" : "Nom",
-        "email" : "Adresse courriel",
+        "email" : "Adresse e-mail",
         "supportthx" : "Merci de nous soutenir ! Merci de nous indiquer combien de signatures tu peux récolter pour nous.",
         "zip" : "CPA",
         "noSigns" : "Nombre de signatures",

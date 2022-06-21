@@ -65,6 +65,11 @@ Router::post('/api/v1/newsletter', function() {
     include(__DIR__ . '/newsletter.php');
 });
 
+Router::get('/api/v1/nosigns', function() {
+    global $contactApi;
+    include(__DIR__ . '/nosigns.php');
+});
+
 Router::start();
 
 ?>

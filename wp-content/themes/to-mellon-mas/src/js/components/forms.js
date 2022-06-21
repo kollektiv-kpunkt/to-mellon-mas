@@ -17,7 +17,7 @@ function formLogic(form) {
     }
     formData.uuid = formUUID;
     (async () => {
-      const rawResponse = await fetch(`api/v1/${endpoint}`, {
+      const rawResponse = await fetch(`/api/v1/${endpoint}`, {
         method: "POST",
         headers: {
           // Accept: "application/json",

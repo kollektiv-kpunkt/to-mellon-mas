@@ -36,7 +36,7 @@ $formid = rand(1,99999);
         </div>
         <div class="tmm-newsletter-image-wrapper my-auto">
             <div class="tmm-newsletter-image-inner">
-                <img src="<?= get_template_directory_uri() ?>/template-parts/elements/img/<?= rand(1,5) ?>-newsletter.jpg">
+                <img src="<?= get_template_directory_uri() ?>/template-parts/elements/img/<?= rand(1,3) ?>-newsletter.jpg">
                 <div class="tmm-newsletter-image-blind tmm-newsletter-image-saturation"></div>
                 <div class="tmm-newsletter-image-blind tmm-newsletter-image-overlay"></div>
                 <?php
